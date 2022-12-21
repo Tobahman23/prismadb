@@ -24,22 +24,22 @@ var i = 0;
 </tr>
 <%
 users.forEach(element => {
-    var wow = JSON.stringify(element); //Stringifies the elements of the user array
+    var type = JSON.stringify(element); //Stringifies the elements of the user array
     i += 1; //Adding 1 to i for each new element so that the number displayed on each tablerow matches
-    wow = wow.replace(/\\/g, ""); //Getting rid of json characters and other unnecessities
-    wow = wow.replace(/[{}]/g, "");
-    wow = wow.replace(/,/g, "");
-    wow = wow.replace(/"/g, "   ");
-    wow = wow.replace(/[]/g, "");
-    wow = wow.replace(/[\[\]']+/g,"")
-    wow = wow.replace(/:/g, "");
-    wow = wow.replace(/name/g, "");
-    wows = wow.split("user"); //Splitting the string in two so that user and name are two seperated entityties
+    type = type.replace(/\\/g, ""); //Getting rid of json characters and other unnecessities
+    type = type.replace(/[{}]/g, "");
+    type = type.replace(/,/g, "");
+    type = type.replace(/"/g, "   ");
+    type = type.replace(/[]/g, "");
+    type = type.replace(/[\[\]']+/g,"")
+    type = type.replace(/:/g, "");
+    type = type.replace(/name/g, "");
+    types = type.split("user"); //Splitting the string in two so that user and name are two seperated entityties
     %>
     <tr>
     <th scope="row"><%= i %></th>
-    <td><%= wows[0] %></td> 
-    <td><%= wows[1] %></td>
+    <td><%= types[0] %></td> 
+    <td><%= types[1] %></td>
     </tr>
 <%});%>  
 </table>
