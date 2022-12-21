@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/headerloggedin'); %>
+    </header>
+    <hr>
+    <br>
+    <br>
+    <div class="card text-black" style="border-radius: 25px;">
+        <div class="card-body p-md-10">
+    <h1>Username: <%=user%></h1>
+    <hr>
+    <image src=<%=image%> class="img-thumbnail" style="width:42%; border-width: 3px; border-color:black;">
+    <br>
+    <hr>
+    <p class="h4 font-weight-lighter"><span class="font-weight-normal">Birthday: </span> <span style="text-decoration: underline;"><%= birthday%></span></p>
+    <br>
+    <p class="h4 font-weight-lighter"><span class="font-weight-normal">Your account was created at:</span> <span style="text-decoration: underline;"><%= createdat%></span></p>
+      <br>
+      </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <hr>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+   
+</body>
+</html>
